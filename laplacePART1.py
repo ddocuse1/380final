@@ -47,7 +47,10 @@ def update(m):
             
     V = newV
     ax.cla()
-    cont = ax.contourf(X,Y,V,levels=100)
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    cont = ax.contourf(X, Y, V, levels=100)
+    
 
     return cont.collections
 

@@ -26,8 +26,8 @@ fig = pp.figure()
 ax = pp.axes(xlim=[0,a],ylim=[0,b])
 
 def init():
-    ax.set_xlabel('x (cm)')
-    ax.set_ylabel('y (cm)')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
     return []
 
 def update(m):
@@ -49,6 +49,8 @@ def update(m):
             
     V = newV
     ax.cla()
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
     cont = ax.contourf(X,Y,V,levels=100)
     return cont.collections
 
